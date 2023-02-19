@@ -43,6 +43,7 @@ class AddTwoNumbers2 {
 
         AddTwoNumbers2 s1 = new AddTwoNumbers2();
 
+        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         System.out.println(s1.addTwoNumbers(l1, l2));
     }
 
@@ -60,13 +61,18 @@ class AddTwoNumbers2 {
              * set it to current node's next, then advance current node to next.
              */
             carry = sum / 10;
-            curr.next = new ListNode(sum % 10);
-            curr = curr.next;
 
+            ListNode tempListNode = new ListNode(sum % 10);
+            curr.next = tempListNode;
+            System.out.println("-----\n" + curr);
+            System.out.println("dummyHead: " + dummyHead);
+            curr = tempListNode;
+            System.out.println(curr);
             if (l1 != null)
                 l1 = l1.next;
             if (l2 != null)
                 l2 = l2.next;
+
         }
         return dummyHead.next;
     }
