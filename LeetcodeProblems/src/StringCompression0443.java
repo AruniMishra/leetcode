@@ -2,9 +2,9 @@ public class StringCompression0443 {
 
     public static void main(String[] args) {
 
-        char[] chars = {'a', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b', 'b'};
+        char[] chars = {'a', 'a', 'b', 'b', 'c', 'c', 'c'};
 
-        System.out.println(new StringCompression0443().compress(chars));
+        new StringCompression0443().compress(chars);
 
     }
 
@@ -13,35 +13,39 @@ public class StringCompression0443 {
         int counter = 0;
         int length = chars.length;
         boolean counterReset = true;
-        char[] result = new char[30];
-        int resultIndex = 0;
+        StringBuilder sBuilder = new StringBuilder();
         for (char c : chars) {
             if (index < length - 1 && c == chars[index + 1]) {
-                if (counterReset) {
-                    counter = 0;
-                }
                 counter++;
                 index++;
-                counterReset = false;
                 continue;
             } else {
                 if (++counter == 1) {
-                    result[resultIndex++] = c;
+                    sBuilder.append(c);
                 } else {
-                    result[resultIndex++] = c;
-                    result[resultIndex++] = (char) (counter + '0');
+                    sBuilder.append(c).append(counter);
                 }
-                System.out.println(counter);
-
                 counterReset = true;
             }
-
+            if (counterReset) {
+                counter = 0;
+            }
             index++;
+        }
+        String s = sBuilder.toString();
 
+
+        System.out.println(s);
+
+
+        chars = s.toCharArray();
+        for (int i = 0; i < s.length(); i++) {
+            chars[i] = s.charAt(i);
         }
 
-        System.out.println(result);
+        System.out.println(chars);
+        System.out.println(chars.length);
 
-        return result.length;
+        return chars.length;
     }
 }
