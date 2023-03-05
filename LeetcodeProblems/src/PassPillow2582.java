@@ -1,8 +1,8 @@
 public class PassPillow2582 {
     public static void main(String[] args) {
 
-        int n = 4;
-        int time = 5;
+        int n = 18;
+        int time = 38;
 
         System.out.println("~~~" + new PassPillow2582().passThePillow(n, time));
 
@@ -15,26 +15,19 @@ public class PassPillow2582 {
         boolean increment = true;
 
         while (++counterTime <= time) {
-
-            if (!increment) {
+            if (increment) {
+                ++index;
+                if (index == n) {
+                    increment = false;
+                }
+            } else {
                 --index;
                 if (index == 1) {
                     increment = true;
                 }
             }
 
-            if (increment) {
-                ++index;
-
-                if (index == n) {
-                    increment = false;
-                }
-            }
-
-            System.out.println(index);
-
         }
         return index;
     }
-
 }
