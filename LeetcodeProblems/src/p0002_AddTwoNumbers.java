@@ -21,7 +21,7 @@ class ListNode {
 
 }
 
-public class AddTwoNumbers0002 {
+public class p0002_AddTwoNumbers {
     public static void main(String[] args) {
 
         ListNode l1;
@@ -41,7 +41,7 @@ public class AddTwoNumbers0002 {
         System.out.println(l1);
         System.out.println(l2);
 
-        AddTwoNumbers0002 s1 = new AddTwoNumbers0002();
+        p0002_AddTwoNumbers s1 = new p0002_AddTwoNumbers();
 
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         System.out.println(s1.addTwoNumbers(l1, l2));

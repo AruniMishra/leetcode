@@ -24,12 +24,12 @@
  * Explanation: Every subarray of nums is a fixed-bound subarray. There are 10 possible subarrays.
  */
 
-public class CountSubarraysWithFixedBounds2444 {
+public class p2444_CountSubarraysWithFixedBounds {
     public static void main(String[] args) {
         int[] nums = new int[]{1, 3, 5, 2, 7, 5};
         int minK = 1;
         int maxK = 5;
-        System.out.println(new CountSubarraysWithFixedBounds2444().countSubarrays(nums, minK, maxK));
+        System.out.println(new p2444_CountSubarraysWithFixedBounds().countSubarrays(nums, minK, maxK));
     }
 
     /**

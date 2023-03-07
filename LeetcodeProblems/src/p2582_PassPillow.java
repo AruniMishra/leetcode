@@ -1,10 +1,10 @@
-public class PassPillow2582 {
+public class p2582_PassPillow {
     public static void main(String[] args) {
 
         int n = 18;
         int time = 38;
 
-        System.out.println("~~~" + new PassPillow2582().passThePillow(n, time));
+        System.out.println("~~~" + new p2582_PassPillow().passThePillow(n, time));
 
     }
 

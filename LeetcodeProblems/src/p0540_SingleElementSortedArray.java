@@ -16,12 +16,12 @@
  * Input: nums = [3,3,7,7,10,11,11]
  * Output: 10
  */
-public class SingleElementSortedArray0540 {
+public class p0540_SingleElementSortedArray {
 
     public static void main(String[] args) {
         int[] numbers = new int[]{1, 2, 2, 3, 3, 4, 4};
 
-        SingleElementSortedArray0540 singleElementSortedArray0540 = new SingleElementSortedArray0540();
+        p0540_SingleElementSortedArray singleElementSortedArray0540 = new p0540_SingleElementSortedArray();
 
         System.out.println(singleElementSortedArray0540.singleNonDuplicate2(numbers));
     }

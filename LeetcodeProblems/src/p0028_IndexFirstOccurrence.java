@@ -1,8 +1,8 @@
-public class IndexFirstOccurrence0028 {
+public class p0028_IndexFirstOccurrence {
     public static void main(String[] args) {
         String haystack = "sadbutsad", needle = "sad";
 
-        System.out.println(new IndexFirstOccurrence0028().strStr(haystack, needle));
+        System.out.println(new p0028_IndexFirstOccurrence().strStr(haystack, needle));
     }
 
     public int strStr(String haystack, String needle) {

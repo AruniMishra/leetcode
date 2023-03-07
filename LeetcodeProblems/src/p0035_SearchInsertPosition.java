@@ -20,11 +20,11 @@
  * Output: 4
  */
 
-public class SearchInsertPosition0035 {
+public class p0035_SearchInsertPosition {
 
     public static void main(String[] args) {
         int[] numbers = new int[]{1, 3, 5, 6};
-        SearchInsertPosition0035 searchInsertPosition0035 = new SearchInsertPosition0035();
+        p0035_SearchInsertPosition searchInsertPosition0035 = new p0035_SearchInsertPosition();
         System.out.println(searchInsertPosition0035.searchInsert(numbers, 7));
     }
 
