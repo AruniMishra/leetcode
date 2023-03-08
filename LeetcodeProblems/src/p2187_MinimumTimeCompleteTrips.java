@@ -3,8 +3,8 @@ import java.util.Arrays;
 public class p2187_MinimumTimeCompleteTrips {
 
     public static void main(String[] args) {
-        int[] time = {10000};
-        int totalTrips = 10000000;
+        int[] time = {3, 3, 8};
+        int totalTrips = 6;
 
         System.out.println(new p2187_MinimumTimeCompleteTrips().minimumTime(time, totalTrips));
     }
@@ -31,10 +31,6 @@ public class p2187_MinimumTimeCompleteTrips {
         long low = Arrays.stream(time).min().getAsInt();
         //casting required, to prevent overflow
         long high = (long) Arrays.stream(time).min().getAsInt() * totalTrips;
-
-        System.out.println(low);
-        System.out.println(high);
-
         while (low < high) {
             long mid = low + (high - low) / 2;
             if (blackbox(mid, totalTrips, time)) {
@@ -50,8 +46,13 @@ public class p2187_MinimumTimeCompleteTrips {
     public boolean blackbox(long isvalidtime, int totalTrips, int[] time) {
         long trips = 0;
         for (int it : time) {
-            trips += isvalidtime / it;
+            // valid, however can be replaced by below statement
+            //trips += isvalidtime / it;
         }
+
+        trips = Arrays.stream(time).asLongStream().reduce(0L, (subtotal, t) -> subtotal + isvalidtime / t);
+
+        System.out.println(trips);
         if (trips >= totalTrips)
             return true;
         return false;
