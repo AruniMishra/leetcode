@@ -48,12 +48,12 @@ import java.util.Arrays;
  * </code>
  */
 
-public class CapacityShipPackageWithinDDays1011 {
+public class p1011_CapacityShipPackageWithinDDays {
     public static void main(String[] args) {
         int[] weights = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
         int days = 5;
 
-        CapacityShipPackageWithinDDays1011 capacity = new CapacityShipPackageWithinDDays1011();
+        p1011_CapacityShipPackageWithinDDays capacity = new p1011_CapacityShipPackageWithinDDays();
         System.out.println(capacity.shipWithinDays(weights, days));
     }
 

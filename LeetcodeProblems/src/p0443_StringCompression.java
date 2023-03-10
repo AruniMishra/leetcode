@@ -33,18 +33,18 @@
  * Explanation: The groups are "a" and "bbbbbbbbbbbb". This compresses to "ab12".
  * </p>
  */
-public class StringCompression0443 {
+public class p0443_StringCompression {
 
     public static void main(String[] args) {
 
         char[] chars = {'a', 'a', 'b', 'b', 'c', 'c', 'c'};
         char[] chars2 = {'a', 'a', 'b', 'b', 'c', 'c', 'c'};
 
-        new StringCompression0443().compress(chars);
+        new p0443_StringCompression().compress(chars);
 
         System.out.println("---------------");
 
-        new StringCompression0443().compress2(chars2);
+        new p0443_StringCompression().compress2(chars2);
 
     }
 
